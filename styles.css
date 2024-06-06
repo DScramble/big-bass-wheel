@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('images/background.jpg') no-repeat top center fixed;
+    background: url('images/background.jpg') top center fixed;
     background-size: cover;
     margin: 0;
     flex-direction: column;
@@ -19,11 +19,11 @@ body {
 .wheel {
     width: 300px;
     height: 300px;
-    border: 10px solid #333;
+    border: 20px solid #333;
     border-radius: 50%;
     background: conic-gradient(
-        #FF5733 0% 25%,
-        #33FF57 25% 50%,
+        #FF5733 0% 5%,
+        #33FF57 5% 50%,
         #3357FF 50% 75%,
         #FF33A1 75% 100%
     );
