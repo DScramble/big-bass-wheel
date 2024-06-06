@@ -3,10 +3,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('images/background.jpg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat top center fixed;
     background-size: cover;
     margin: 0;
     flex-direction: column;
+}
+
+.heading {
+    font-size: 3em; /* Adjust the size as needed */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    margin: 20px 0;
 }
 
 .wheel-container {
@@ -17,18 +24,29 @@ body {
 }
 
 .wheel {
-    width: 300px;
-    height: 300px;
-    border: 10px solid #333;
+    width: 200px;
+    height: 200px;
+    border: 30px solid #333;
     border-radius: 50%;
     background: conic-gradient(
-        #FF5733 0% 25%,
-        #33FF57 25% 50%,
-        #3357FF 50% 75%,
+        #ffffff 0% 2%,
+        #33FF57 2% 45%,
+        #3357FF 45% 75%,
         #FF33A1 75% 100%
     );
     position: relative;
     transition: transform 4s ease-out;
+}
+
+.pin {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #000000;
+    position: absolute;
+    top: 222px; /* Adjust this value to position the pin correctly */
+    z-index: 10;
 }
 
 .spin-button {
