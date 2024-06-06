@@ -9,7 +9,6 @@ body {
     flex-direction: column;
 }
 
-
 .wheel-container {
     display: flex;
     flex-direction: column;
@@ -33,9 +32,11 @@ body {
 }
 
 .spin-button {
-    width: 100px; /* Adjust size as needed */
     margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+    display: none; /* Hidden by default */
 }
 
 .images-container {
