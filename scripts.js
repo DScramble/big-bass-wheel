@@ -13,7 +13,7 @@ document.getElementById('spin-button').addEventListener('click', function() {
 function showSpinButton() {
     const spinButton = document.getElementById('spin-button');
     const bubbleSound = document.getElementById('bubble-sound');
-    const randomTime = Math.floor(Math.random() * 60000); // Random time between 0 and 60000 milliseconds (1 minute)
+    const randomTime = Math.floor(Math.random() * 20000); // Random time between 0 and 20000 milliseconds (20 seconds)
     
     setTimeout(() => {
         spinButton.style.display = 'block';
