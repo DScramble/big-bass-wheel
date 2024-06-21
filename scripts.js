@@ -1,30 +1,39 @@
-document.getElementById('spin-button').addEventListener('click', function() {
-    const wheel = document.getElementById('wheel');
-    const degrees = Math.floor(Math.random() * 360) + 720; // Random angle between 720 and 1080 degrees
-    wheel.style.transform = `rotate(${degrees}deg)`;
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('background-video');
+    var audio = document.getElementById('background-audio');
 
-    // Redirect to bigfishbuilt.com after spinning
-    setTimeout(() => {
-        window.location.href = 'https://bigfishbuilt.com';
-    }, 4000); // Redirect after the spin animation (4 seconds)
-});
+    video.addEventListener('play', function() {
+        audio.play();
+    });
 
-// Function to show the spin button at random intervals
-function showSpinButton() {
-    const spinButton = document.getElementById('spin-button');
-    const bubbleSound = document.getElementById('bubble-sound');
-    const randomTime = Math.floor(Math.random() * 20000); // Random time between 0 and 20000 milliseconds (20 seconds)
-    
-    setTimeout(() => {
-        spinButton.style.display = 'block';
-        bubbleSound.play(); // Play the bubble sound
+    document.getElementById('spin-button').addEventListener('click', function() {
+        const wheel = document.getElementById('wheel');
+        const degrees = Math.floor(Math.random() * 360) + 720; // Random angle between 720 and 1080 degrees
+        wheel.style.transform = `rotate(${degrees}deg)`;
+
+        // Redirect to bigfishbuilt.com after spinning
+        setTimeout(() => {
+            window.location.href = 'https://bigfishbuilt.com';
+        }, 4000); // Redirect after the spin animation (4 seconds)
+    });
+
+    // Function to show the spin button at random intervals
+    function showSpinButton() {
+        const spinButton = document.getElementById('spin-button');
+        const bubbleSound = document.getElementById('bubble-sound');
+        const randomTime = Math.floor(Math.random() * 20000); // Random time between 0 and 20000 milliseconds (20 seconds)
         
         setTimeout(() => {
-            spinButton.style.display = 'none';
-            showSpinButton(); // Schedule the next appearance
-        }, 1000); // Display for 1 second
-    }, randomTime);
-}
+            spinButton.style.display = 'block';
+            bubbleSound.play(); // Play the bubble sound
+            
+            setTimeout(() => {
+                spinButton.style.display = 'none';
+                showSpinButton(); // Schedule the next appearance
+            }, 1000); // Display for 1 second
+        }, randomTime);
+    }
 
-// Initial call to start the random appearances
-showSpinButton();
+    // Initial call to start the random appearances
+    showSpinButton();
+});
